@@ -60,3 +60,10 @@ By running the script, the detection results of the sample images will be saved 
   doi={10.1109/TII.2022.3232777}
 }
 ```
+## Contact
+If you have any question, please contact: lzk773629528@163.com and houzhangfang@xidian.edu.cn,
+
+Copyright &copy; Xidian University.
+
+## License
+MIT License. This code is only freely available for non-commercial research use.
