@@ -1,4 +1,7 @@
-Source code for testing the detection performance of DAGNet on infrared UAV targets. The codes are validated on a server with NVIDIA RTX 3090.
+Source code for the TII 2023 paper "Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance".
+
+## Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance [[PDF](https://ieeexplore.ieee.org/document/10018470/)]
+
 
 ## Software installation
 
