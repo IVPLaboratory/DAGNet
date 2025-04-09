@@ -47,6 +47,7 @@ If you wanna run the script with CUDA device, set `--cuda True`, otherwise `--cu
 By running the script, the detection results of the sample images will be saved in the `detection` directory that will appear after finishing running the script. In each detection result image, the red box indicates the detected UAV target.
 
 ## Citation
+If you find our work useful in your research, please consider citing our paper:
 ```
 @ARTICLE{2023TII_DAGNet,
   title     =  {Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent {UAV} Surveillance},
