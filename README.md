@@ -23,11 +23,13 @@ Python environmental setups:
  - torchvision==0.9.1+cu111
  - tqdm==4.59.0
 
-For Python environmental setups, run `pip install -r requirements.txt`.
+For Python environmental setups, run `pip install -r requirements.txt`. Note that the `mmcv` and some other packages have been updated, as well as the CUDA and cuDNN. If you run into some environmental problems, make sure the environment are correctly configured.
 
 ## Weight file
 
-The weight file can be downloaded from <a href='https://drive.google.com/file/d/1hCjJDQncvuL3c5ca8r_KLqtcMDttLRdU/view?usp=sharing'>Google Drive</a> / <a href='https://pan.baidu.com/s/16bgVu4htvHTcYVbjp7JLag'>BaiduYun</a> (password: code).
+The pretrained backbone weight file for finetuning can be downloaded from <a href='https://drive.google.com/file/d/1GLfEk0E3_54hZLQOcdR03hrPhoYiT1jy/view?usp=sharing'>Google Drive</a> / <a href='https://pan.baidu.com/s/17KQYchw3rNS2Mn4Cv79hiw'>Baidu Drive</a> (passcode: 2pyz).
+
+The testing weight file can be downloaded from <a href='https://drive.google.com/file/d/1hCjJDQncvuL3c5ca8r_KLqtcMDttLRdU/view?usp=sharing'>Google Drive</a> / <a href='https://pan.baidu.com/s/16bgVu4htvHTcYVbjp7JLag'>Baidu Drive</a> (passcode: code).
 
 The weight file should be placed in the ***weights*** directory, and it should be created manually.
 
@@ -38,6 +40,24 @@ In our paper we utilize two infrared image sequences that are online available, 
 ## Test images
 
 The images for test purposes are given in the folder named `test_imgs`
+
+## Training
+
+In `train.py`, you need to determine the following key configurations:
+
+- `dataset_root`: Where your `VOC2007` directory is. Give the full absolute path if necessary.
+- `basenet`: The path to the pretrained backbone weight file. Should be placed in the `weights` directory.
+- `batch_size`: Batch size for training. Could be any number that is a power of 2, based on GPU usage.
+- `resume`: Whether to resume the training. If `True`, then the training code will **automatically** find the latest available intermediate weight file to resume.
+- `cuda`: Whether to use GPU for training.
+- `learning_rate`: Learning rate for training. Default is `1e-3`. Could smaller it if `NaN` occurs.
+- `save_folder`: The directory to save all weight files during training.
+
+There are two places you need to pay attention to:
+- `data/config.py`: There's one dictionary variable called `voc_dagnet`, and the key `num_classes` controls the number of classes, while `lr_steps` controls when the learning rate drops according to the iterations.
+- `data/voc0712.py`: The cuple variable `VOC_CLASSES` defines what class names are. If there's only one class to detect, **make sure you add a comma after the first string**.
+
+Note that, if you run into some problems with multi-GPU training, it might probably caused by `torch.nn.DataParallel`. You can use `torch.distributed.launch` or `torch.distributed.run` instead and try.
 
 ## Testing
 
