@@ -4,7 +4,7 @@ Source code for the TII 2023 paper "Differentiated Attention Guided Network Over
 
 ## Network Architecture
 <p align="center">
-  <img src="utlis/Network_architecture_DAGNet.png" width="auto" alt="accessibility text">
+  <img src="utils/Network_architecture_DAGNet.png" width="auto" alt="accessibility text">
 </p>
 Overall architecture of the proposed DAGNet.
 
