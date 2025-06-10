@@ -2,6 +2,11 @@ Source code for the TII 2023 paper "Differentiated Attention Guided Network Over
 
 ## Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance [[PDF](https://ieeexplore.ieee.org/document/10018470/)], Supplemental Material [[PDF](https://ieeexplore.ieee.org/document/10018470/media#media)] 
 
+## Network Architecture
+<p align="center">
+  <img src="utlis/Network_architecture_DAGNet.png" width="auto" alt="accessibility text">
+</p>
+Overall architecture of the proposed DAGNet.
 
 ## Software installation
 
