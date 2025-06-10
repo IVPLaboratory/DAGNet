@@ -1,6 +1,6 @@
 Source code for the TII 2023 paper "Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance".
 
-## Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance [[PDF](https://ieeexplore.ieee.org/document/10018470/)]
+## Differentiated Attention Guided Network Over Hierarchical and Aggregated Features for Intelligent UAV Surveillance [[PDF](https://ieeexplore.ieee.org/document/10018470/)], supplemental material [[PDF](https://ieeexplore.ieee.org/document/10018470/media#media)] 
 
 
 ## Software installation
